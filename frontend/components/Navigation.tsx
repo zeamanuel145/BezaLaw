@@ -78,9 +78,11 @@ export function Navigation({ onBookingClick }: NavigationProps) {
         <div className="flex justify-between items-center h-full">
 
           {/* Logo */}
+          <a href="/" >
           <h1 className="text-2xl font-bold text-blue-600">
             Law Firm
           </h1>
+          </a>
 
           {/* Nav Links */}
           <div className="hidden md:flex items-center space-x-8">
