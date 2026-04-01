@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "about": "À Propos",
+    "booking": "Réserver",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Bienvenue au Cabinet Juridique Beza",
+    "subtitle": "Le Cabinet de Beza Tesfaye, votre spécialiste juridique à Seattle et partout où le besoin se fait sentir, intervient en conseil et en contentieux dans plusieurs domaines: droit de l’immigration, droit aérien, développement international durable et droit minier. Plaçant la bienveillance, la prise en charge personnalisée et le suivi rigoureux au cœur de sa mission, notre cabinet veille à ce que chaque client se sente en confiance et pleinement soutenu. De la première consultation à la résolution de votre dossier, nous vous accompagnons avec disponibilité et engagement, afin d’offrir des résultats concrets et des solutions juridiques de haute qualité, adaptées aux exigences d’un environnement international.",
+    "cta": "Commencer"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Expertise juridique complète dans plusieurs domaines de pratique",
+    "mining": {
+      "name": "Droit Minier",
+      "description": "Notre cabinet de droit minier offre des conseils juridiques spécialisés en matière de droits miniers, d'autorisations, de conformité et de développement de projets. Nous aidons nos clients à s'y retrouver dans des réglementations complexes, à obtenir des permis et à gérer les risques pour garantir des opérations minières efficaces et responsables."
+    },
+    "aviation": {
+      "name": "Droit de l'Aviation",
+      "description": "Notre cabinet intervient dans un large éventail de domaines juridiques liés au secteur aérien, couvrant notamment l’achat et la vente d’aéronefs, les accidents aériens, les contrats et les sociétés d’exploitation. Nous traitons également les litiges relevant du droit du tourisme et du transport aérien, tels que les différends relatifs aux bagages. Forts de notre expertise, nous assistons nos clients dans l’identification, la prévention et la gestion des risques juridiques inhérents aux activités aériennes."
+    },
+    "sustainable": {
+      "name": "Développement International Durable",
+      "description": "Nous proposons des services juridiques spécialisés en développement durable international, accompagnant nos clients dans la conformité réglementaire, la gestion des risques environnementaux et la mise en œuvre de projets responsables. Notre expertise couvre les aspects juridiques liés aux partenariats internationaux, au financement durable et à la protection des droits humains. Notre approche intègre également les dimensions juridiques et sociales afin de soutenir des initiatives durables favorisant l’émancipation et l’égalité des sexes à l’échelle internationale.  "
+    },
+    "immigration": {
+      "name": "Droit de l'Immigration",
+      "description": "Notre cabinet d’avocats spécialisé en droit de l’immigration  accompagne  les ressortissants étrangers dans l’ensemble de leurs démarches, qu’elles soient administratives — telles que l’obtention ou le renouvellement d’un titre de séjour — ou contentieuses, notamment en cas de refus ou de mesures d’éloignement.  Notre cabinet prend également en charge les procédures d’immigration professionnelle: obtention des autorisations de travail pour les salariés étrangers, assistance pour les titres de séjour liés à l’emploi, régularisation de la situation des travailleurs, ainsi que le dépôt et le suivi des dossiers administratifs."
+    }
+  },
+  "about": {
+    "title": "À Propos de Beza Tesfaye",
+    "subtitle": "Impitoyable, compatissante et compétent en matière de soutien juridique",
+    "bio": "Beza Tesfaye est une juriste de renom reconnue pour son excellence en droit de l’immigration, droit minier, droit aérien et développement international durable. Diplômée de la  Faculté de droit de la Sorbonne à Paris et de l’Université de Washington, elle offre une expertise approfondie et un accompagnement sur mesure dans les dossiers d’immigration familiale et professionnelle, ainsi que dans les affaires transfrontalières et commerciales complexes.",
+    "bio2": "Lauréate du Prix des Droits Humains décerné par la Commission des droits de l’homme de Seattle, Beza incarne une passion indéfectible pour la justice et la protection des droits fondamentaux.",
+    "bio3": "Parfaitement trilingue en français, anglais et amharique, elle allie rigueur juridique, vision internationale et engagement humain, offrant à chacun de ses clients des solutions stratégiques et personnalisées, à la hauteur des plus hautes exigences du monde juridique contemporain.",
+    "education": "Faculté de Droit de la Sorbonne & Université de Washington",
+    "experience": "Avocate Internationale",
+    "commitment": "Expertise stratégique avec engagement inébranlable envers la justice"
+  },
+  "booking": {
+    "title": "Réserver Votre Rendez-vous",
+    "subtitle": "Planifiez une consultation avec notre avocat",
+    "selectDate": "Sélectionnez une date et une heure",
+    "selectService": "Sélectionnez un service",
+    "yourName": "Votre Nom",
+    "yourEmail": "Votre Email",
+    "yourPhone": "Votre Numéro de Téléphone",
+    "description": "Détails Supplémentaires (Optionnel)",
+    "bookButton": "Confirmer la Réservation",
+    "availableSlots": "Créneaux Disponibles",
+    "selectSlot": "Cliquez pour sélectionner votre heure préférée",
+    "success": "Réservation confirmée! Vérifiez votre email pour les détails.",
+    "error": "Erreur lors de la création de la réservation. Veuillez réessayer."
+  },
+  "contact": {
+    "title": "Nous Contacter",
+    "subtitle": "Des questions? Envoyez-nous un message",
+    "name": "Votre Nom",
+    "email": "Votre Email",
+    "phone": "Numéro de Téléphone",
+    "subject": "Sujet",
+    "message": "Votre Message",
+    "send": "Envoyer le Message",
+    "success": "Message envoyé avec succès! Nous vous répondrons bientôt.",
+    "error": "Erreur lors de l'envoi du message. Veuillez réessayer."
+  },
+  "footer": {
+    "copyright": "Tous droits réservés",
+    "followUs": "Nous Suivre",
+    "contact": "Coordonnées",
+    "hours": "Heures de Bureau"
+  },
+  "common": {
+    "cancel": "Annuler",
+    "submit": "Soumettre",
+    "submitting": "Envoi en cours...",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "close": "Fermer"
+  }
+}

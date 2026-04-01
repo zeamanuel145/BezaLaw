@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "booking": "Book Now",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Welcome to Beza Law Firm",
+    "subtitle": "At Beza Law Firm, we deliver world-class legal strategy with precision and purpose. Our expertise spans immigration, aviation, sustainable international development, and complex cross-border matters. Guided by global insight and uncompromising integrity, we champion individuals, corporations, and institutions navigating multifaceted legal landscapes. With Beza, you gain not just counsel  but a trusted partner committed to advancing your vision on the world stage. We don’t just solve problems — we redefine what’s possible.",
+    "cta": "Start Now"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Comprehensive legal expertise across multiple practice areas",
+    "mining": {
+      "name": "Mining",
+      "description": "Our mining law practice provides expert legal guidance on mineral rights, permitting, compliance, and project development. We help clients navigate complex regulations, secure licenses, and manage risks to ensure efficient and responsible mining operations."
+    },
+    "aviation": {
+      "name": "Aviation",
+      "description": "Our aviation law practice offers comprehensive legal support for airlines, operators, and aviation businesses. We assist with regulatory compliance, licensing, contracts, and dispute resolution to help clients navigate the complexities of the aviation industry with confidence and efficiency."
+    },
+    "sustainable": {
+      "name": "Sustainable International Development",
+      "description": "We deliver strategic legal counsel in international sustainable development, guiding clients through regulatory compliance, environmental governance, and responsible project execution. Our practice integrates deep expertise in international partnerships, sustainable financing, and human rights protection."
+    },
+    "immigration": {
+      "name": "Immigration",
+      "description": "Our immigration practice is dedicated to delivering strategic, results-driven representation for individuals, families, and corporations navigating complex immigration matters. We handle family-based and employment-based immigration with precision and care."
+    }
+  },
+  "about": {
+    "title": "About Beza Tesfaye",
+    "subtitle": "Relentless, compassionate and Competent Legal Support",
+    "bio": "Beza Tesfaye is a distinguished international attorney recognized for her commanding expertise in immigration law, mining law, aviation law, and sustainable international development. Educated at two of the world's most respected institutions — the Sorbonne Law School in Paris and the University of Washington — she brings an elite global perspective to every case.",
+    "bio2": "Renowned for her strategic acumen and unwavering commitment to justice, Beza delivers sophisticated legal counsel to individuals, corporations, and institutions navigating complex family-, employment-, and cross-border matters. Her leadership and integrity have earned her recognition as a Human Rights Award Leader by the Seattle Human Rights Commission.",
+    "bio3": "Fluent in French, English, and Amharic, Beza embodies the fusion of intellect, global insight, and fearless advocacy. She stands at the forefront of modern legal practice — protecting rights, advancing equity, and empowering her clients to succeed on a global stage.",
+    "education": "Sorbonne Law School & University of Washington",
+    "experience": "International Attorney",
+    "commitment": "Strategic expertise with unwavering commitment to justice"
+  },
+  "booking": {
+    "title": "Book Your Appointment",
+    "subtitle": "Schedule a consultation with our lawyer",
+    "selectDate": "Select a date and time",
+    "selectService": "Select a service",
+    "yourName": "Your Name",
+    "yourEmail": "Your Email",
+    "yourPhone": "Your Phone Number",
+    "description": "Additional Details (Optional)",
+    "bookButton": "Confirm Booking",
+    "availableSlots": "Available Slots",
+    "selectSlot": "Click to select your preferred time",
+    "success": "Booking confirmed! Check your email for details.",
+    "error": "Error creating booking. Please try again."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have questions? Send us a message",
+    "name": "Your Name",
+    "email": "Your Email",
+    "phone": "Phone Number",
+    "subject": "Subject",
+    "message": "Your Message",
+    "send": "Send Message",
+    "success": "Message sent successfully! We'll be in touch soon.",
+    "error": "Error sending message. Please try again."
+  },
+  "footer": {
+    "copyright": "All rights reserved",
+    "followUs": "Follow Us",
+    "contact": "Contact Info",
+    "hours": "Office Hours"
+  },
+  "common": {
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "submitting": "Submitting...",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "close": "Close"
+  }
+}
