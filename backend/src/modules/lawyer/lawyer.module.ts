@@ -5,7 +5,9 @@ import { LawyerController } from './lawyer.controller';
 import { Lawyer, LawyerSchema } from './schemas/lawyer.schema';
 
 @Module({
-  imports: [MongooseModule.forFeature([{ name: Lawyer.name, schema: LawyerSchema }])],
+  imports: [
+    MongooseModule.forFeature([{ name: Lawyer.name, schema: LawyerSchema }]),
+  ],
   providers: [LawyerService],
   controllers: [LawyerController],
   exports: [LawyerService],

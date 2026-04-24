@@ -22,5 +22,4 @@ export class Contact extends Document {
   status: string;
 }
 
-
 export const ContactSchema = SchemaFactory.createForClass(Contact);

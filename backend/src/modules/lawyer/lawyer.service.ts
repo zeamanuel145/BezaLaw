@@ -11,15 +11,24 @@ export class LawyerService {
     return this.lawyerModel.findOne();
   }
 
-  async createOrUpdateLawyer(lawyerData: Partial<Lawyer>): Promise<Lawyer | null> {
+  async createOrUpdateLawyer(
+    lawyerData: Partial<Lawyer>,
+  ): Promise<Lawyer | null> {
     const existingLawyer = await this.lawyerModel.findOne();
     if (existingLawyer) {
-      return this.lawyerModel.findByIdAndUpdate(existingLawyer._id, lawyerData, { new: true });
+      return this.lawyerModel.findByIdAndUpdate(
+        existingLawyer._id,
+        lawyerData,
+        { new: true },
+      );
     }
     return this.lawyerModel.create(lawyerData);
   }
 
-  async updateGoogleTokens(accessToken: string, refreshToken?: string): Promise<Lawyer | null> {
+  async updateGoogleTokens(
+    accessToken: string,
+    refreshToken?: string,
+  ): Promise<Lawyer | null> {
     return this.lawyerModel.findOneAndUpdate(
       {},
       {

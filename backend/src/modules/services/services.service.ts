@@ -5,7 +5,9 @@ import { Service } from './schemas/service.schema';
 
 @Injectable()
 export class ServicesService {
-  constructor(@InjectModel(Service.name) private serviceModel: Model<Service>) {}
+  constructor(
+    @InjectModel(Service.name) private serviceModel: Model<Service>,
+  ) {}
 
   async getAllServices(): Promise<Service[]> {
     return this.serviceModel.find({ isActive: true });
@@ -19,7 +21,10 @@ export class ServicesService {
     return this.serviceModel.create(serviceData);
   }
 
-  async updateService(id: string, serviceData: Partial<Service>): Promise<Service | null> {
+  async updateService(
+    id: string,
+    serviceData: Partial<Service>,
+  ): Promise<Service | null> {
     return this.serviceModel.findByIdAndUpdate(id, serviceData, { new: true });
   }
 

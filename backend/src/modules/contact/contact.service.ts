@@ -15,9 +15,9 @@ export class ContactService {
     const { name, email, phone, subject, message } = contactData;
 
     // ✅ validate required fields
-   if (!name || !email || !phone || !subject || !message) {
-  throw new Error('Missing contact fields');
-}
+    if (!name || !email || !phone || !subject || !message) {
+      throw new Error('Missing contact fields');
+    }
 
     if (!process.env.LAWYER_EMAIL) {
       throw new Error('LAWYER_EMAIL is missing in .env');
@@ -39,7 +39,7 @@ export class ContactService {
     );
 
     // Send confirmation to client
-    await this.emailService.sendContactConfirmation(email, name,phone);
+    await this.emailService.sendContactConfirmation(email, name, phone);
 
     return contact;
   }

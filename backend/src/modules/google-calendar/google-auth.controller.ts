@@ -21,7 +21,7 @@ export class GoogleAuthController {
       prompt: 'consent',
     });
 
-    return res.redirect(url); 
+    return res.redirect(url);
   }
 
   @Get('callback')
