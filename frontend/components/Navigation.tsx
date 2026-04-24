@@ -70,7 +70,7 @@ export function Navigation({ onBookingClick }: NavigationProps) {
         ${
           isScrolled
             ? 'bg-sky-100/70 backdrop-blur-lg shadow-md border-b border-white/20 h-14'
-            : 'bg-transparent h-16'
+            : 'bg-stone-200 h-16'
         }
       `}
     >
@@ -79,13 +79,13 @@ export function Navigation({ onBookingClick }: NavigationProps) {
 
           {/* Logo */}
           <a href="/" >
-          <h1 className="text-2xl font-bold text-blue-600">
+          <h1 className="text-2xl font-bold text-indigo-600">
             Law Firm
           </h1>
           </a>
 
           {/* Nav Links */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8  text-sky-200">
             
             {['services', 'about', 'contact'].map((section) => (
               <button
@@ -96,7 +96,7 @@ export function Navigation({ onBookingClick }: NavigationProps) {
                   ${
                     activeSection === section
                       ? 'text-blue-600 font-semibold'
-                      : 'text-gray-700 hover:text-blue-600'
+                      : 'text-gray-500 hover:text-blue-600'
                   }
                 `}
               >

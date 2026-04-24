@@ -2,67 +2,70 @@
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { Gavel } from 'lucide-react';
 
 interface HeroProps {
   onBookingClick: () => void;
 }
 
 export function Hero({ onBookingClick }: HeroProps) {
-   const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL!;
+  const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL!;
   const { t } = useLanguage();
 
   return (
-  <section className="relative min-h-screen bg-gradient-to-b from-blue-50 to-white flex items-center overflow-hidden">
-  
-  {/*  BLOBS */}
-  <div className="absolute inset-0 z-0 overflow-hidden">
-    
-    <div
-      className="absolute top-[-120px] left-[-120px] w-[400px] h-[400px] bg-blue-300 rounded-full blur-3xl opacity-40"
-      style={{ animation: "floatSlow 20s ease-in-out infinite" }}
-    />
+    <section className="relative min-h-screen bg-gradient-to-r from-slate-900 via-slate-800 to-slate-50 overflow-hidden ">
+      {/* Background grid pattern on dark side */}
+      <div className="absolute inset-0 left-0 w-1/2 bg-[url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 800%22><defs><pattern id=%22grid%22 width=%2240%22 height=%2240%22 patternUnits=%22userSpaceOnUse%22><path d=%22M 40 0 L 0 0 0 40%22 fill=%22none%22 stroke=%22rgba(255,255,255,0.03)%22 stroke-width=%221%22/></pattern></defs><rect width=%221200%22 height=%22800%22 fill=%22url(%23grid)%22/></svg>')] opacity-20"></div>
 
-    <div
-      className="absolute bottom-[-120px] right-[-120px] w-[400px] h-[400px] bg-sky-300 rounded-full blur-3xl opacity-40"
-      style={{ animation: "floatSlow 25s ease-in-out infinite reverse" }}
-    />
+      {/* Decorative shape background */}
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-amber-400/10 to-transparent rounded-full blur-3xl"></div>
 
-    <div
-      className="absolute top-1/2 left-1/2 w-[250px] h-[250px] bg-cyan-200 rounded-full blur-2xl opacity-30 -translate-x-1/2 -translate-y-1/2"
-      style={{ animation: "floatSlow 30s ease-in-out infinite" }}
-    />
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-screen flex items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+          {/* Left Content */}
+          <div className="text-white space-y-8">
 
-  </div>
+            {/* Main Heading */}
+            <div>
+              <h1 className="text-6xl lg:text-7xl font-serif font-bold text-white leading-tight text-pretty mb-6">
+                {t('hero.title')}
+              </h1>
+            </div>
 
-  <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-    
-    <div className="text-center md:text-left">
-      <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
-        {t('hero.title')}
-      </h1>
+            {/* Subtitle */}
+            <p className="text-lg text-slate-200 leading-relaxed max-w-lg text-balance">
+              {t('hero.subtitle')}
+            </p>
 
-      <p className="text-xl sm:text-2xl text-gray-600 mb-8 max-w-2xl">
-        {t('hero.subtitle')}
-      </p>
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <button
+                onClick={() => window.open(calendlyUrl, '_blank')}
+                className="group inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/30"
+              >
+                {t('hero.cta') || 'Book Now'}
+                <span className="transform group-hover:translate-x-1 transition-transform duration-300">→</span>
+              </button>
+            </div>
+          </div>
 
-      <Button
-        size="lg"
-        className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg"
-        onClick={() => window.open(calendlyUrl, '_blank')}
-      >
-        {t('hero.cta')}
-      </Button>
-    </div>
-{/* image */}
-    <div className="flex justify-center">
-      <img
-        src="/images/Poster.png"
-        alt="Poster"
-        className="w-full max-w-md object-contain"
-      />
-    </div>
-
-  </div>
-</section>
+          {/* Right Side - Scales of Justice Image */}
+          <div className="hidden lg:flex items-center justify-center relative bg-blur-200">
+            <div className="relative w-full max-w-md h-screen flex items-center justify-center">
+              {/* Background light section */}
+              {/* <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-amber-50 to-slate-100 rounded-3xl"></div> */}
+              {/* Image container */}
+              <div className="relative z-10 flex items-center justify-center h-full">
+                <img 
+                  src="/images/hero.png" 
+                  alt="Scales of Justice"
+                 // className="max-w-sm max-h-96 object-contain drop-shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
