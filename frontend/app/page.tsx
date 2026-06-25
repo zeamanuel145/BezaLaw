@@ -12,13 +12,12 @@ import { Footer } from '@/components/Footer';
 export default function Home() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
-  const handleBookingClick = () => setIsBookingOpen(true);
   const handleBookingClose = () => setIsBookingOpen(false);
 
   return (
     <main className="min-h-screen">
-      <Navigation onBookingClick={handleBookingClick} />
-      <Hero onBookingClick={handleBookingClick} />
+      <Navigation />
+      <Hero />
       <Services />
       <About />
       <Contact />

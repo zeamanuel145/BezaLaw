@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 type Language = 'en' | 'fr' | 'am';
 
 interface Translations {
-  [key: string]: any;
+  [key: string]: string | Record<string, unknown>;
 }
 
 export function useLanguage() {
@@ -43,11 +43,11 @@ export function useLanguage() {
 
   const t = (key: string, defaultValue = key) => {
     const keys = key.split('.');
-    let value: any = translations;
+    let value: unknown = translations;
 
     for (const k of keys) {
       if (value && typeof value === 'object' && k in value) {
-        value = value[k];
+        value = (value as Record<string, unknown>)[k];
       } else {
         return defaultValue;
       }

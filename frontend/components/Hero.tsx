@@ -1,14 +1,9 @@
 'use client';
 
+import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Button } from '@/components/ui/button';
-import { Gavel } from 'lucide-react';
 
-interface HeroProps {
-  onBookingClick: () => void;
-}
-
-export function Hero({ onBookingClick }: HeroProps) {
+export function Hero() {
   const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL!;
   const { t } = useLanguage();
 
@@ -56,10 +51,14 @@ export function Hero({ onBookingClick }: HeroProps) {
               {/* <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-amber-50 to-slate-100 rounded-3xl"></div> */}
               {/* Image container */}
               <div className="relative z-10 flex items-center justify-center h-full">
-                <img 
+                <Image 
                   src="/images/hero.png" 
                   alt="Scales of Justice"
-                 // className="max-w-sm max-h-96 object-contain drop-shadow-2xl"
+                  height={400}
+                  width={400}
+                  // fill
+                  priority 
+                  className="object-contain"
                 />
               </div>
             </div>

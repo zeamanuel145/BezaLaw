@@ -8,13 +8,14 @@ import {
   Body,
 } from '@nestjs/common';
 import { ContactService } from './contact.service';
+import { Contact } from './schemas/contact.schema';
 
 @Controller('api/contact')
 export class ContactController {
   constructor(private readonly contactService: ContactService) {}
 
   @Post('submit')
-  async submitContact(@Body() contactData) {
+  async submitContact(@Body() contactData: Partial<Contact>) {
     return this.contactService.submitContact(contactData);
   }
 

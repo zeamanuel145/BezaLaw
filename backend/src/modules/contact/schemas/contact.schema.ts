@@ -4,22 +4,22 @@ import { Document } from 'mongoose';
 @Schema({ timestamps: true })
 export class Contact extends Document {
   @Prop({ required: true })
-  name: string;
+  name!: string;
 
   @Prop({ required: true })
-  email: string;
+  email!: string;
 
   @Prop({ required: true })
-  phone: string;
+  phone!: string;
 
   @Prop({ required: true })
-  subject: string;
+  subject!: string;
 
   @Prop({ required: true })
-  message: string;
+  message!: string;
 
   @Prop({ default: 'unread' })
-  status: string;
+  status!: string;
 }
 
 export const ContactSchema = SchemaFactory.createForClass(Contact);

@@ -1,9 +1,15 @@
 import { Controller, Get, Query, Res } from '@nestjs/common';
-import { google } from 'googleapis';
+import type { Response } from 'express';
+import { google, Auth } from 'googleapis';
+
+interface GoogleTokens {
+  access_token: string;
+  refresh_token?: string;
+}
 
 @Controller('auth/google')
 export class GoogleAuthController {
-  private oauth2Client;
+  private oauth2Client: Auth.OAuth2Client;
 
   constructor() {
     this.oauth2Client = new google.auth.OAuth2(
@@ -14,7 +20,7 @@ export class GoogleAuthController {
   }
 
   @Get()
-  redirectToGoogle(@Res() res) {
+  redirectToGoogle(@Res() res: Response) {
     const url = this.oauth2Client.generateAuthUrl({
       access_type: 'offline',
       scope: ['https://www.googleapis.com/auth/calendar'],
@@ -25,8 +31,10 @@ export class GoogleAuthController {
   }
 
   @Get('callback')
-  async handleCallback(@Query('code') code: string, @Res() res) {
-    const { tokens } = await this.oauth2Client.getToken(code);
+  async handleCallback(@Query('code') code: string, @Res() res: Response) {
+    const { tokens } = (await this.oauth2Client.getToken(code)) as {
+      tokens: GoogleTokens;
+    };
 
     console.log('SAVE THESE TOKENS:', tokens);
 

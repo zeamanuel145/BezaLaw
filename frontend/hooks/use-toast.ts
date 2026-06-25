@@ -5,7 +5,7 @@ import * as React from 'react'
 
 // Update the import path below to the correct relative path where your toast types are defined.
 // For example, if the file is at 'frontend/components/ui/sonner.ts', use:
-import { toast as sonnerToast } from 'sonner'
+
 import type { ExternalToast } from 'sonner'
 // If you do not have these types, create a file at 'frontend/components/ui/sonner.ts' and export them.
 

@@ -1,9 +1,22 @@
 import { Injectable } from '@nestjs/common';
-import { google } from 'googleapis';
+import { google, Auth, calendar_v3 } from 'googleapis';
+
+interface GoogleTokens {
+  access_token: string;
+  refresh_token?: string;
+}
+
+interface EventDetails {
+  summary: string;
+  description: string;
+  startTime: Date;
+  endTime: Date;
+  attendeeEmail: string;
+}
 
 @Injectable()
 export class GoogleCalendarService {
-  private oauth2Client;
+  private oauth2Client: Auth.OAuth2Client;
 
   constructor() {
     this.oauth2Client = new google.auth.OAuth2(
@@ -13,10 +26,7 @@ export class GoogleCalendarService {
     );
   }
 
-  private getCalendar(tokens: {
-    access_token: string;
-    refresh_token?: string;
-  }) {
+  private getCalendar(tokens: GoogleTokens): calendar_v3.Calendar {
     this.oauth2Client.setCredentials(tokens);
 
     return google.calendar({
@@ -25,7 +35,7 @@ export class GoogleCalendarService {
     });
   }
 
-  async getAvailableSlots(calendarId: string, tokens: any) {
+  async getAvailableSlots(calendarId: string, tokens: GoogleTokens) {
     const calendar = this.getCalendar(tokens);
 
     const now = new Date();
@@ -44,18 +54,12 @@ export class GoogleCalendarService {
 
   async createEvent(
     calendarId: string,
-    tokens: any,
-    eventDetails: {
-      summary: string;
-      description: string;
-      startTime: Date;
-      endTime: Date;
-      attendeeEmail: string;
-    },
+    tokens: GoogleTokens,
+    eventDetails: EventDetails,
   ) {
     const calendar = this.getCalendar(tokens);
 
-    const event = {
+    const event: calendar_v3.Schema$Event = {
       summary: eventDetails.summary,
       description: eventDetails.description,
       start: {
@@ -85,7 +89,7 @@ export class GoogleCalendarService {
     return response.data;
   }
 
-  async cancelEvent(calendarId: string, eventId: string, tokens: any) {
+  async cancelEvent(calendarId: string, eventId: string, tokens: GoogleTokens) {
     const calendar = this.getCalendar(tokens);
 
     await calendar.events.delete({

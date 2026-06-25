@@ -28,7 +28,7 @@ export class ServicesService {
     return this.serviceModel.findByIdAndUpdate(id, serviceData, { new: true });
   }
 
-  async deleteService(id: string): Promise<any> {
+  async deleteService(id: string): Promise<Service | null> {
     return this.serviceModel.findByIdAndDelete(id);
   }
 }

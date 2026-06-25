@@ -4,11 +4,11 @@ import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { SuccessMessage } from '@/components/SuccessMessage';
 import { FormErrors } from '@/components/FormErrors';
 import { validateContactForm, type ContactFormData, type ValidationError } from '@/lib/validation';
-import { API_ENDPOINTS, SUCCESS_MESSAGES } from '@/lib/constants';
+import { API_ENDPOINTS } from '@/lib/constants';
 
 export function Contact() {
   const { t } = useLanguage();

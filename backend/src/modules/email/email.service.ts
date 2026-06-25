@@ -1,6 +1,12 @@
 import { Injectable } from '@nestjs/common';
 import * as nodemailer from 'nodemailer';
 
+interface SendMailResult {
+  messageId: string;
+  accepted: string[];
+  rejected: string[];
+}
+
 @Injectable()
 export class EmailService {
   private transporter: nodemailer.Transporter;
@@ -35,8 +41,8 @@ export class EmailService {
     phone: string,
     appointmentDate: Date,
     serviceName: string,
-  ) {
-    return this.transporter.sendMail({
+  ): Promise<SendMailResult> {
+    const info = (await this.transporter.sendMail({
       from: process.env.SMTP_USER!,
       to: email,
       subject: 'Booking Confirmation - Law Firm',
@@ -50,7 +56,8 @@ export class EmailService {
         <p>We look forward to meeting you.</p>
         <p>Best regards,<br/>Law Firm Team</p>
       `,
-    });
+    })) as SendMailResult;
+    return info;
   }
 
   async sendBookingNotificationToLawyer(
@@ -60,8 +67,8 @@ export class EmailService {
     phone: string,
     serviceName: string,
     appointmentDate: Date,
-  ) {
-    return this.transporter.sendMail({
+  ): Promise<SendMailResult> {
+    const info = (await this.transporter.sendMail({
       from: process.env.SMTP_USER!,
       to: lawyerEmail,
       subject: 'New Booking - Law Firm',
@@ -73,7 +80,8 @@ export class EmailService {
         <p><strong>Service:</strong> ${serviceName}</p>
         <p><strong>Date & Time:</strong> ${appointmentDate.toLocaleString()}</p>
       `,
-    });
+    })) as SendMailResult;
+    return info;
   }
 
   async sendContactForm(
@@ -83,8 +91,8 @@ export class EmailService {
     phone: string,
     subject: string,
     message: string,
-  ) {
-    return this.transporter.sendMail({
+  ): Promise<SendMailResult> {
+    const info = (await this.transporter.sendMail({
       from: process.env.SMTP_USER!,
       to: lawyerEmail,
       replyTo: clientEmail,
@@ -98,15 +106,16 @@ export class EmailService {
         <p><strong>Message:</strong></p>
         <p>${message}</p>
       `,
-    });
+    })) as SendMailResult;
+    return info;
   }
 
   async sendContactConfirmation(
     clientEmail: string,
     clientName: string,
     phone: string,
-  ) {
-    return this.transporter.sendMail({
+  ): Promise<SendMailResult> {
+    const info = (await this.transporter.sendMail({
       from: process.env.SMTP_USER!,
       to: clientEmail,
       subject: 'We Received Your Message - Law Firm',
@@ -118,6 +127,7 @@ export class EmailService {
         <p>We will get back to you soon.</p>
         <p>Best regards,<br/>Law Firm Team</p>
       `,
-    });
+    })) as SendMailResult;
+    return info;
   }
 }

@@ -1,4 +1,4 @@
-'use client';
+import Link from 'next/link';
 
 import { useEffect, useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -10,11 +10,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
-interface NavigationProps {
-  onBookingClick: () => void;
-}
-
-export function Navigation({ onBookingClick }: NavigationProps) {
+export function Navigation() {
   const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL!;
 
   const { t, language, changeLanguage } = useLanguage();
@@ -41,7 +37,7 @@ export function Navigation({ onBookingClick }: NavigationProps) {
 
       // Active section detection
       const sections = ['services', 'about', 'contact'];
-      for (let section of sections) {
+      for (const section of sections) {
         const el = document.getElementById(section);
         if (el) {
           const rect = el.getBoundingClientRect();
@@ -78,11 +74,11 @@ export function Navigation({ onBookingClick }: NavigationProps) {
         <div className="flex justify-between items-center h-full">
 
           {/* Logo */}
-          <a href="/" >
+          <Link href="/" >
           <h1 className="text-2xl font-bold text-indigo-600">
             Law Firm
           </h1>
-          </a>
+          </Link>
 
           {/* Nav Links */}
           <div className="hidden md:flex items-center space-x-8  text-sky-200">

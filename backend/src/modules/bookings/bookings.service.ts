@@ -44,9 +44,13 @@ export class BookingsService {
     };
 
     try {
+      const tokens = {
+        access_token: lawyer.googleAccessToken,
+        refresh_token: lawyer.googleRefreshToken,
+      };
       const googleEvent = await this.googleCalendarService.createEvent(
         lawyer.googleCalendarId,
-        lawyer.googleAccessToken,
+        tokens,
         eventDetails,
       );
 
@@ -93,16 +97,20 @@ export class BookingsService {
       const lawyer = await this.lawyerService.getLawyerProfile();
       if (!lawyer) throw new Error('Lawyer not found');
 
+      const tokens = {
+        access_token: lawyer.googleAccessToken,
+        refresh_token: lawyer.googleRefreshToken,
+      };
       return await this.googleCalendarService.getAvailableSlots(
         lawyer.googleCalendarId,
-        lawyer.googleAccessToken,
+        tokens,
       );
     } catch (error) {
       console.error('Error fetching available slots:', error);
       return [];
     }
   }
-
+//  i dont think this is right, we should be deleting the booking not just changing the status to cancelled, if we change the status to cancelled then we will have a lot of cancelled bookings in our database and it will be hard to manage them, also if we change the status to cancelled then we will have to check the status of the booking every time we want to fetch the bookings, if we delete the booking then we don't have to worry about the status of the booking and we can just fetch the bookings without any additional checks, also if we delete the booking then we can free up some space in our database and improve the performance of our application, so i think we should delete the booking instead of changing the status to cancelled, what do you think?
   async cancelBooking(id: string): Promise<Booking> {
     const booking = await this.bookingModel.findByIdAndUpdate(
       id,
@@ -117,10 +125,14 @@ export class BookingsService {
         const lawyer = await this.lawyerService.getLawyerProfile();
         if (!lawyer) throw new Error('Lawyer not found');
 
+        const tokens = {
+          access_token: lawyer.googleAccessToken,
+          refresh_token: lawyer.googleRefreshToken,
+        };
         await this.googleCalendarService.cancelEvent(
           lawyer.googleCalendarId,
           booking.googleEventId,
-          lawyer.googleAccessToken,
+          tokens,
         );
       } catch (error) {
         console.error('Error cancelling Google Calendar event:', error);
