@@ -61,7 +61,7 @@ export function Navigation() {
   return (
     <nav
       className={`
-        fixed top-0 w-full z-50 transition-all duration-500 ease-in-out
+        fixed top-0 mb-4 w-full z-50 transition-all duration-500 ease-in-out
         ${showNav ? 'translate-y-0' : '-translate-y-full'}
         ${
           isScrolled

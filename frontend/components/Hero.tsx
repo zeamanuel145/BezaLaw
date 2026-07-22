@@ -8,7 +8,7 @@ export function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-r from-slate-900 via-slate-800 to-slate-50 overflow-hidden ">
+    <section className="relative min-h-screen bg-gradient-to-r from-slate-900 via-slate-800 to-slate-50 overflow-hidden mt-16 lg:mt-12">
       {/* Background grid pattern on dark side */}
       <div className="absolute inset-0 left-0 w-1/2 bg-[url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 800%22><defs><pattern id=%22grid%22 width=%2240%22 height=%2240%22 patternUnits=%22userSpaceOnUse%22><path d=%22M 40 0 L 0 0 0 40%22 fill=%22none%22 stroke=%22rgba(255,255,255,0.03)%22 stroke-width=%221%22/></pattern></defs><rect width=%221200%22 height=%22800%22 fill=%22url(%23grid)%22/></svg>')] opacity-20"></div>
 

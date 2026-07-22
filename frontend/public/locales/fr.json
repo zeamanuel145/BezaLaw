@@ -32,15 +32,24 @@
     }
   },
   "about": {
-    "title": "À Propos de Beza Tesfaye",
-    "subtitle": "Impitoyable, compatissante et compétent en matière de soutien juridique",
-    "bio": "Beza Tesfaye est une juriste de renom reconnue pour son excellence en droit de l’immigration, droit minier, droit aérien et développement international durable. Diplômée de la  Faculté de droit de la Sorbonne à Paris et de l’Université de Washington, elle offre une expertise approfondie et un accompagnement sur mesure dans les dossiers d’immigration familiale et professionnelle, ainsi que dans les affaires transfrontalières et commerciales complexes.",
+  "title": "À Propos de Nous",
+
+  "beza": {
+    "name": "Beza Tesfaye",
+    "title": "Avocate Internationale",
+    "bio1": "Beza Tesfaye est une juriste de renom reconnue pour son excellence en droit de l’immigration, droit minier, droit aérien et développement international durable. Diplômée de la Faculté de droit de la Sorbonne à Paris et de l’Université de Washington, elle offre une expertise approfondie et un accompagnement sur mesure dans les dossiers d’immigration familiale et professionnelle, ainsi que dans les affaires transfrontalières et commerciales complexes.",
     "bio2": "Lauréate du Prix des Droits Humains décerné par la Commission des droits de l’homme de Seattle, Beza incarne une passion indéfectible pour la justice et la protection des droits fondamentaux.",
-    "bio3": "Parfaitement trilingue en français, anglais et amharique, elle allie rigueur juridique, vision internationale et engagement humain, offrant à chacun de ses clients des solutions stratégiques et personnalisées, à la hauteur des plus hautes exigences du monde juridique contemporain.",
-    "education": "Faculté de Droit de la Sorbonne & Université de Washington",
-    "experience": "Avocate Internationale",
-    "commitment": "Expertise stratégique avec engagement inébranlable envers la justice"
+    "bio3": "Parfaitement trilingue en français, anglais et amharique, elle allie rigueur juridique, vision internationale et engagement humain, offrant à chacun de ses clients des solutions stratégiques et personnalisées, à la hauteur des plus hautes exigences du monde juridique contemporain."
   },
+
+  "tesfaye": {
+    "name": "Tesfaye Chemir",
+    "title": "Avocat en droit des affaires internationales",
+    "bio1": "Tesfaye Chemir est un avocat diplômé de la Faculté de droit de l’Université d’Addis-Abeba.",
+    "bio2": "Fort de plus de quarante années d’expérience en droit international des affaires, il fournit des conseils juridiques dans un large éventail de domaines, notamment le droit commercial, le droit des sociétés, le droit minier et les transactions transfrontalières.",
+    "bio3": "Tout au long de sa carrière, il a accompagné des entreprises, des organisations et divers partenaires dans la gestion de questions juridiques complexes liées au commerce international, à l’investissement, au secteur minier et au développement des affaires."
+  }
+},
   "booking": {
     "title": "Réserver Votre Rendez-vous",
     "subtitle": "Planifiez une consultation avec notre avocat",

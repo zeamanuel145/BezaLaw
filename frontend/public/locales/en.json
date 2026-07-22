@@ -32,15 +32,24 @@
     }
   },
   "about": {
-    "title": "About Beza Tesfaye",
-    "subtitle": "Relentless, compassionate and Competent Legal Support",
-    "bio": "Beza Tesfaye is a distinguished international attorney recognized for her commanding expertise in immigration law, mining law, aviation law, and sustainable international development. Educated at two of the world's most respected institutions — the Sorbonne Law School in Paris and the University of Washington — she brings an elite global perspective to every case.",
+  "title": "About Us",
+
+  "beza": {
+    "name": "Beza Tesfaye",
+    "title": "International Attorney",
+    "bio1": "Beza Tesfaye is a distinguished international attorney recognized for her commanding expertise in immigration law, mining law, aviation law, and sustainable international development. Educated at two of the world's most respected institutions — the Sorbonne Law School in Paris and the University of Washington — she brings an elite global perspective to every case.",
     "bio2": "Renowned for her strategic acumen and unwavering commitment to justice, Beza delivers sophisticated legal counsel to individuals, corporations, and institutions navigating complex family-, employment-, and cross-border matters. Her leadership and integrity have earned her recognition as a Human Rights Award Leader by the Seattle Human Rights Commission.",
-    "bio3": "Fluent in French, English, and Amharic, Beza embodies the fusion of intellect, global insight, and fearless advocacy. She stands at the forefront of modern legal practice — protecting rights, advancing equity, and empowering her clients to succeed on a global stage.",
-    "education": "Sorbonne Law School & University of Washington",
-    "experience": "International Attorney",
-    "commitment": "Strategic expertise with unwavering commitment to justice"
+    "bio3": "Fluent in French, English, and Amharic, Beza embodies the fusion of intellect, global insight, and fearless advocacy. She stands at the forefront of modern legal practice—protecting rights, advancing equity, and empowering her clients to succeed on a global stage."
   },
+
+  "tesfaye": {
+    "name": "Tesfaye Chemir",
+    "title": "International Business Attorney",
+    "bio1": "Tesfaye Chemir is an attorney who graduated from Addis Ababa University School of Law.",
+    "bio2": "He has more than 40 years of experience in international business law, providing legal counsel on a wide range of commercial, corporate, mining, and cross-border transactions.",
+    "bio3": "Throughout his career, he has worked with businesses, organizations, and stakeholders on complex legal matters involving international trade, mining, investment, and business development."
+  }
+},
   "booking": {
     "title": "Book Your Appointment",
     "subtitle": "Schedule a consultation with our lawyer",
