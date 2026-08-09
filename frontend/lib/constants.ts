@@ -1,6 +1,5 @@
 // API Configuration
-export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://bezalaw.onrender.com';
-
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL ;
 // API Endpoints
 export const API_ENDPOINTS = {
   // Contact endpoints
