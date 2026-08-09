@@ -12,8 +12,6 @@ import { Footer } from '@/components/Footer';
 export default function Home() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
-  const handleBookingClose = () => setIsBookingOpen(false);
-
   return (
     <main className="min-h-screen">
       <Navigation />
@@ -21,7 +19,7 @@ export default function Home() {
       <Services />
       <About />
       <Contact />
-      <Booking isOpen={isBookingOpen} onClose={handleBookingClose} />
+      <Booking isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
       <Footer />
     </main>
   );
